@@ -1,14 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 
 class Contest extends Component {
-  componentDidMount() {
-    this.props.fetchNames(this.props.nameIds);
-  }
+	componentDidMount() {
+		this.props.fetchNames(this.props.nameIds);
+	}
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addName(this.refs.newNameInput.value, this.props._id);
     this.refs.newNameInput.value = '';
-  };
+  }  
   render() {
     return (
       <div className="Contest">
@@ -51,7 +51,7 @@ class Contest extends Component {
                    className="form-control" />
                 <span className="input-group-btn">
                   <button type="submit" className="btn btn-info">
-                     Sumbit
+                     Submit
                   </button>
                 </span>
               </div>
@@ -68,14 +68,14 @@ class Contest extends Component {
   }
 }
 
-Contest.propTypes = {
-  _id: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  contestListClick: PropTypes.func.isRequired,
-  fetchNames: PropTypes.func.isRequired,
-  nameIds: PropTypes.array.isRequired,
-  lookupName: PropTypes.func.isRequired,
-  addName: PropTypes.func.isRequired,
-};
+// Contest.propTypes = {
+//   _id: PropTypes.string.isRequired,
+//   description: PropTypes.string.isRequired,
+//   contestListClick: PropTypes.func.isRequired,
+//   fetchNames: PropTypes.func.isRequired,
+//   nameIds: PropTypes.array.isRequired,
+//   lookupName: PropTypes.func.isRequired,
+//   addName: PropTypes.func.isRequired,
+// };
 
 export default Contest;
