@@ -23,7 +23,7 @@ class Module extends React.Component {
 			var stop = false;
 			var newmessage = this.props.message;
 			return (
-				<p className="text-center" >
+				<p className="text-center paragraph" >
 					{ newmessage }
 				</p>
 			);
@@ -112,7 +112,7 @@ class Module extends React.Component {
 		if (this.props.type == 'button'){
 			var lets = `button delay-${this.props.number}`;
 			return (
-				<div className={lets} onClick={ this.props.onClickEvent } >{ this.props.message }</div>
+				<a className={lets} href={ this.props.onClickEvent } >{ this.props.message }</a>
 			);
 		}
 	}

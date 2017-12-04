@@ -1,5 +1,5 @@
 {
-  "name": "PatrickManville.com",
+  "name": "patrickmanville.com",
   "version": "1.0.0",
   "description": "My Site",
   "main": "index.js",
@@ -24,6 +24,7 @@
     "express": "^4.15.4",
     "gulp": "^3.9.1",
     "json-loader": "^0.5.7",
+    "mongo": "^0.1.0",
     "mongodb": "^2.2.31",
     "node-sass-middleware": "^0.11.0",
     "react": "^15.6.1",

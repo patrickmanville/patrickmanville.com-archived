@@ -47,6 +47,20 @@ class App extends React.Component {
 							type: "\'text\'",
 							message: "\'Front-end Developer\'"
 						},
+						// {
+						// 	type: "\'paragraph\'",
+						// 	message: "\'I\\'m a Front-end Developer based in the Netherlands, with 4 years experience creating a variety of web apps. My day-to-day job consists of building and maintaining efficient, reusable and reliable code.\'"
+						// },
+						{
+							type: "\'button\'",
+							message: "\'Email\'",
+							onClickEvent: "\'mailto:patrickmanville@yahoo.co.uk\'"
+						},
+						{
+							type: "\'button\'",
+							message: "\'LinkedIn\'",
+							onClickEvent: "\'https://uk.linkedin.com/in/patrick-manville\'"
+						},
 					],
 					[
 						{
@@ -56,6 +70,11 @@ class App extends React.Component {
 						{
 							type: "\'text\'",
 							message: "\'My work history & education\'"
+						},
+						{
+							type: "\'button\'",
+							message: "\'LinkedIn\'",
+							onClickEvent: "\'https://uk.linkedin.com/in/patrick-manville\'"
 						},
 						{
 							type: "\'experience\'",
@@ -245,27 +264,27 @@ class App extends React.Component {
 								},
 							]
 						}
-					],
-					[
-						{
-							type: "\'header\'",
-							message: "\'Contact\'"
-						},
-						{
-							type: "\'text\'",
-							message: "\'Get in touch\'"
-						},
-						{
-							type: "\'button\'",
-							message: "\'Email me\'",
-							onClickEvent: "{this.changePage}"
-						},
-						// {
-						// 	type: "\'button\'",
-						// 	message: "\'Add me on LinkedIn\'",
-						// 	onClickEvent: "{this.changePage}"
-						// }
 					]
+					// [
+					// 	{
+					// 		type: "\'header\'",
+					// 		message: "\'Contact\'"
+					// 	},
+					// 	{
+					// 		type: "\'text\'",
+					// 		message: "\'Get in touch\'"
+					// 	},
+					// 	{
+					// 		type: "\'button\'",
+					// 		message: "\'Email me\'",
+					// 		onClickEvent: "{this.changePage}"
+					// 	},
+					// 	// {
+					// 	// 	type: "\'button\'",
+					// 	// 	message: "\'Add me on LinkedIn\'",
+					// 	// 	onClickEvent: "{this.changePage}"
+					// 	// }
+					// ]
 				]
 			}
 		});
@@ -316,7 +335,7 @@ class App extends React.Component {
 	}
 	makeModule(thispage){
 		var result = [];
-		var animation = 0;
+		var animation = 10;
 		var imgs = 0;
 		if (this.state.contents){
 			for (var i = 0; i < this.state.contents[thispage].length; i++){ 
@@ -324,7 +343,7 @@ class App extends React.Component {
 				allprops.number = animation;
 				for (var p in allprops) {
 					allprops[p] = eval(allprops[p]);
-					if (p == 'message'){
+					if (p == 'message' && allprops.type != 'paragraph'){
 						if (allprops.type == 'button'){
 								animation += 15;
 						}
@@ -351,14 +370,6 @@ class App extends React.Component {
 								return <br key={index}></br>;
 							}
 						);
-						// var cheese = function(){return allprops.message}() ;
-						// console.log(cheese);
-						// console.log(allprops.message);
-						// allprops.message = allprops.message.split("<i></i>").map(
-						// 	function(x, index){
-						// 		return <span>{x}</span>;
-						// 	}
-						// );
 					}
 				}
 				animation += 5;
@@ -385,8 +396,9 @@ class App extends React.Component {
 	}
 	makePage(){
 		var result = [];
-		for (var i = 0; i <= 4; i++){
+		for (var i = 0; i <= 3; i++){
 			var stuff = <div key={i} onClick={this.changePages.bind(this, i)} className={'App page-' + i + ' menu menu-' + i + this.activePage(i)}>
+					
 					<div className="main-wrapper">
 						<div className="left-section">
 							<div className="background-section">
