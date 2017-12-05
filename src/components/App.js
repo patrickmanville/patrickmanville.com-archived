@@ -265,26 +265,6 @@ class App extends React.Component {
 							]
 						}
 					]
-					// [
-					// 	{
-					// 		type: "\'header\'",
-					// 		message: "\'Contact\'"
-					// 	},
-					// 	{
-					// 		type: "\'text\'",
-					// 		message: "\'Get in touch\'"
-					// 	},
-					// 	{
-					// 		type: "\'button\'",
-					// 		message: "\'Email me\'",
-					// 		onClickEvent: "{this.changePage}"
-					// 	},
-					// 	// {
-					// 	// 	type: "\'button\'",
-					// 	// 	message: "\'Add me on LinkedIn\'",
-					// 	// 	onClickEvent: "{this.changePage}"
-					// 	// }
-					// ]
 				]
 			}
 		});
@@ -399,35 +379,7 @@ class App extends React.Component {
 		for (var i = 0; i <= 3; i++){
 			var stuff = <div key={i} onClick={this.changePages.bind(this, i)} className={'App page-' + i + ' menu menu-' + i + this.activePage(i)}>
 					
-					<div className="main-wrapper">
-						<div className="left-section">
-							<div className="background-section">
-								<div className="background">
-									<div className="phone">
-										<div className="phone-screen">
-											<div className="phone-contents">
-												<div className="moon">
-												</div>
-												<div className="sun">
-													<div className="sun-part sun-part-1"></div>
-													<div className="sun-part sun-part-2"></div>
-													<div className="sun-part sun-part-3"></div>
-													<div className="sun-part sun-part-4"></div>
-													<div className="sun-part sun-part-5"></div>
-													<div className="sun-core"></div>
-												</div>
-												<div className="flag flag-england-top"></div>
-												<div className="flag flag-left"></div>
-												<div className="flag flag-middle"></div>
-												<div className="flag flag-right"></div>
-											</div>
-										</div>
-										<div className="phone-stand">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div className="background-section">
 					</div>
 					<div className="text-section">
 						<div className="text-wrapper">
