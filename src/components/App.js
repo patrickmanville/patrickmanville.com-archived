@@ -47,10 +47,6 @@ class App extends React.Component {
 							type: "\'text\'",
 							message: "\'Front-end Developer\'"
 						},
-						// {
-						// 	type: "\'paragraph\'",
-						// 	message: "\'I\\'m a Front-end Developer based in the Netherlands, with 4 years experience creating a variety of web apps. My day-to-day job consists of building and maintaining efficient, reusable and reliable code.\'"
-						// },
 						{
 							type: "\'button\'",
 							message: "\'Email\'",
@@ -70,11 +66,6 @@ class App extends React.Component {
 						{
 							type: "\'text\'",
 							message: "\'My work history & education\'"
-						},
-						{
-							type: "\'button\'",
-							message: "\'LinkedIn\'",
-							onClickEvent: "\'https://uk.linkedin.com/in/patrick-manville\'"
 						},
 						{
 							type: "\'experience\'",
@@ -329,7 +320,6 @@ class App extends React.Component {
 						}
 						var stop = false;
 						var proplength = allprops.message.length - 1;
-						// console.log(allprops.message);
 						allprops.message = allprops.message.split("").map(
 							function(x, index){
 								animation ++;
@@ -341,9 +331,6 @@ class App extends React.Component {
 									stop = true;
 								}
 								var lets = `delay-${animation}`;
-								// if (x == ' '){
-								// 	return <i></i>;
-								// }
 								if (x != '~'){
 									return <span key={index} className={lets}>{x}</span>;
 								}
@@ -378,15 +365,14 @@ class App extends React.Component {
 		var result = [];
 		for (var i = 0; i <= 3; i++){
 			var stuff = <div key={i} onClick={this.changePages.bind(this, i)} className={'App page-' + i + ' menu menu-' + i + this.activePage(i)}>
-					
-					<div className="background-section">
-					</div>
-					<div className="text-section">
-						<div className="text-wrapper">
-							{this.makeModule(i)}
-						</div>
-					</div>
-				</div>;
+							<div className="background-section">
+							</div>
+							<div className="text-section">
+								<div className="text-wrapper">
+									{this.makeModule(i)}
+								</div>
+							</div>
+						</div>;
 			result.push(stuff);
 		};
 		return result;

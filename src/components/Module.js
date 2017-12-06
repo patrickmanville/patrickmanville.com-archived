@@ -36,7 +36,7 @@ class Module extends React.Component {
 			var newurlarray = [];
 			for(var i = 0; i < newurl.length; i++){
 				newurlarray.push(
-					<div className="work">
+					<div key={i} className="work">
 						<div className="front">
 						<img className="image" src={ newurl[i].img } />
 						</div>
@@ -86,7 +86,7 @@ class Module extends React.Component {
 			var newmessage = this.props.message;
 			var newrating = [];
 			for (var i = 0; i < this.props.rating; i++){
-				newrating.push(<span className="star"></span>)
+				newrating.push(<span key={i} className="star"></span>)
 			}
 			return (
 				<div className="skill">
