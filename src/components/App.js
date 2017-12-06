@@ -135,7 +135,7 @@ class App extends React.Component {
 						{
 							type: "\'skill\'",
 							message: "\'ReactJS\'",
-							rating: "\'3\'"
+							rating: "\'4\'"
 						},
 						{
 							type: "\'skill\'",
@@ -164,6 +164,11 @@ class App extends React.Component {
 						},
 						{
 							type: "\'skill\'",
+							message: "\'Bootstrap\'",
+							rating: "\'3\'"
+						},
+						{
+							type: "\'skill\'",
 							message: "\'Drupal\'",
 							rating: "\'4\'"
 						},
@@ -171,11 +176,6 @@ class App extends React.Component {
 							type: "\'skill\'",
 							message: "\'Wordpress\'",
 							rating: "\'4\'"
-						},
-						{
-							type: "\'skill\'",
-							message: "\'Hubspot CMS\'",
-							rating: "\'5\'"
 						},
 						{
 							type: "\'skill\'",
