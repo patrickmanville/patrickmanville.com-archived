@@ -43,17 +43,19 @@
     		position: absolute;
     		top: 50%;
     		left: 50%;
-    		width: 80px;
-    		height: 80px;
+    		width: 35px;
+    		height: 35px;
     		transform: translate(-50%, -50%);
+    		opacity: 0;
+		    @include m-prefix(animation, opacity-in 0.75s 1s linear 1 normal forwards running);
     		hr {
     			@include fullscreen;
 			    border: none;
 			    margin: 0;
     			&:before {
 	    			content: "";
-	    			width: 15px;
-	    			height: 15px;
+	    			width: 7px;
+	    			height: 7px;
 	    			border-radius: 100px;
 	    			top: 0;
 	    			left: 0;
@@ -186,7 +188,7 @@
 						}
 						.paragraph {
 							opacity: 0;
-						    @include m-prefix(animation, 0.75s skill-entry 1.5s forwards);
+						    @include m-prefix(animation, 0.75s opacity-in 1.5s forwards);
 						}
 				    }
 			    	.background-section {
@@ -223,16 +225,16 @@
 								    margin: 20px auto 0;
 								    vertical-align: top;
 								    font-size: 0;
-								    @include m-prefix(animation, 0.75s skill-entry 1.5s forwards);
+								    @include m-prefix(animation, 0.75s opacity-in 1.5s forwards);
 								    opacity: 0;
 								    &:nth-of-type(2){
-									    @include m-prefix(animation, 0.75s skill-entry 1.6s forwards);
+									    @include m-prefix(animation, 0.75s opacity-in 1.6s forwards);
 								    }
 								    &:nth-of-type(3){
-									    @include m-prefix(animation, 0.75s skill-entry 1.7s forwards);
+									    @include m-prefix(animation, 0.75s opacity-in 1.7s forwards);
 								    }
 								    &:nth-of-type(4){
-									    @include m-prefix(animation, 0.75s skill-entry 1.8s forwards);
+									    @include m-prefix(animation, 0.75s opacity-in 1.8s forwards);
 								    }
 								    &.one-col {
 									    width: 50%;
@@ -285,7 +287,7 @@
 							margin: 0 auto;
 						    .skill {
 						    	opacity: 0;
-							    @include m-prefix(animation, 0.5s skill-entry 1.5s forwards);
+							    @include m-prefix(animation, 0.5s opacity-in 1.5s forwards);
 							    font-size: 0px;
 							    transition: 1s;
 							    width: 33%;
@@ -304,23 +306,23 @@
 								    display: inline-block;
 								    .star {
 								    	opacity: 0;
-									    @include m-prefix(animation, 0.5s star-entry 2s forwards);
+									    @include m-prefix(animation, 0.5s opacity-in 2s forwards);
 							    		font-family: lineAwesome;
 									    display: inline;
 							    		&:after {
 						    			    content: "\f318";
 							    		}
 									    &:nth-child(2){
-										    @include m-prefix(animation, 0.5s star-entry 2.1s forwards);
+										    @include m-prefix(animation, 0.5s opacity-in 2.1s forwards);
 									    }
 									    &:nth-child(3){
-										    @include m-prefix(animation, 0.5s star-entry 2.2s forwards);
+										    @include m-prefix(animation, 0.5s opacity-in 2.2s forwards);
 									    }
 									    &:nth-child(4){
-										    @include m-prefix(animation, 0.5s star-entry 2.3s forwards);
+										    @include m-prefix(animation, 0.5s opacity-in 2.3s forwards);
 									    }
 									    &:nth-child(5){
-										    @include m-prefix(animation, 0.5s star-entry 2.4s forwards);
+										    @include m-prefix(animation, 0.5s opacity-in 2.4s forwards);
 									    }
 								    }
 								}
@@ -344,7 +346,7 @@
 						.works {
 							font-size: 1rem;
 							opacity: 0;
-						    @include m-prefix(animation, 1s works-in 1.7s forwards);
+						    @include m-prefix(animation, 1s opacity-in 1.7s forwards);
 						    margin: 24px auto;
 						    box-shadow: 0px 0px 39px #dbecfd;
 						    .works-inner {
@@ -596,16 +598,16 @@
 		height: 0px;
 	}
 	70% {
-		width: 15px;
-		height: 15px;
+		width: 7px;
+		height: 7px;
 	}
 	100% {
-		width: 15px;
-		height: 15px;
+		width: 7px;
+		height: 7px;
 	}
 }
 
-@keyframes works-in {
+@keyframes opacity-in {
 	0% {
 		opacity: 0;
 	}
@@ -627,46 +629,6 @@
 	}
 }
 
-// @keyframes page-exit {
-// 	0% {
-// 		width: 100%;
-// 		height: 100%;
-// 		padding-top: 0%;
-// 		border-radius: 0px;
-// 		z-index: 0;
-// 	    top: 0;
-// 	    left: 50%;
-// 	    font-size: 0;
-// 	    display: none;
-// 	}
-// 	89% {
-// 		width: 100%;
-// 		height: 100%;
-// 		padding-top: 0%;
-// 		border-radius: 0px;
-// 		z-index: 0;
-// 	    top: 0;
-// 	    left: 50%;
-// 	    font-size: 0;
-// 	}
-// 	90% {
-// 		width: 0%;
-// 		height: 0%;
-// 	    // top: 5.5%;
-// 		padding-top: 0%;
-// 		border-radius: 200px;
-// 		z-index: 0;
-// 	    display: none;
-// 	}
-// 	91% {
-// 		display: block;
-// 	}
-// 	99% {
-// 	}
-// 	100% {
-// 	}
-// }
-
 @keyframes change-z-index {
 	0% {
 		z-index: 0;
@@ -679,23 +641,6 @@
 	}
 }
 
-@keyframes star-entry {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes skill-entry {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
 
 @keyframes header-grow {
 	0% {
@@ -737,8 +682,6 @@
 
 @keyframes jumpText {
 	0% {
-	}
-	38% {
 	}
 	69% {
 	}
