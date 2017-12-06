@@ -371,24 +371,24 @@ class App extends React.Component {
 
 	}
 	makePage(){
-		if(!this.state.contents){
-			return (
-				<div className="loader">
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-					<hr></hr>
-				</div>
-			)
-		}
+		// if(!this.state.contents){
+		// 	return (
+		// 		<div className="loader">
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 			<hr></hr>
+		// 		</div>
+		// 	)
+		// }
 		var result = [];
 		for (var i = 0; i <= 3; i++){
 			var stuff = <div key={i} onClick={this.changePages.bind(this, i)} className={'App page-' + i + ' menu menu-' + i + this.activePage(i)}>
