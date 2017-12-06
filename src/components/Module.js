@@ -88,12 +88,14 @@ class Module extends React.Component {
 			for (var i = 0; i < this.props.rating; i++){
 				newrating.push(<span key={i} className="star"></span>)
 			}
+			var thisclass = "stars";
+			if (this.props.rating == 5)( thisclass = "stars five-stars" );
 			return (
-				<div className="skill">
+				<div className="skill" >
 					<p className="text-center">
 						{ newmessage }
 					</p>
-					<p className="stars">
+					<p className={ thisclass }>
 						{ newrating}
 					</p>
 				</div>

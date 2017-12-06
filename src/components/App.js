@@ -119,18 +119,23 @@ class App extends React.Component {
 						},
 						{
 							type: "\'skill\'",
-							message: "\'Responsive Design\'",
-							rating: "\'5\'"
-						},
-						{
-							type: "\'skill\'",
 							message: "\'jQuery\'",
 							rating: "\'4\'"
 						},
 						{
 							type: "\'skill\'",
+							message: "\'EJS\'",
+							rating: "\'3\'"
+						},
+						{
+							type: "\'skill\'",
+							message: "\'Responsive Design\'",
+							rating: "\'5\'"
+						},
+						{
+							type: "\'skill\'",
 							message: "\'NodeJS\'",
-							rating: "\'2\'"
+							rating: "\'3\'"
 						},
 						{
 							type: "\'skill\'",
@@ -165,17 +170,12 @@ class App extends React.Component {
 						{
 							type: "\'skill\'",
 							message: "\'PHP\'",
-							rating: "\'2\'"
+							rating: "\'3\'"
 						},
 						{
 							type: "\'skill\'",
 							message: "\'Semantic HTML\'",
-							rating: "\'2\'"
-						},
-						{
-							type: "\'skill\'",
-							message: "\'APIs\'",
-							rating: "\'2\'"
+							rating: "\'3\'"
 						},
 						{
 							type: "\'skill\'",
@@ -190,7 +190,7 @@ class App extends React.Component {
 						{
 							type: "\'skill\'",
 							message: "\'Command line\'",
-							rating: "\'3\'"
+							rating: "\'4\'"
 						}
 					],
 					[
@@ -371,35 +371,15 @@ class App extends React.Component {
 
 	}
 	makePage(){
-		// if(!this.state.contents){
-		// 	return (
-		// 		<div className="loader">
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 			<hr></hr>
-		// 		</div>
-		// 	)
-		// }
 		var result = [];
 		for (var i = 0; i <= 3; i++){
-			var stuff = <div key={i} onClick={this.changePages.bind(this, i)} className={'App page-' + i + ' menu menu-' + i + this.activePage(i)}>
-							<div className="background-section">
-							</div>
+			var stuff = <section key={i} onClick={this.changePages.bind(this, i)} className={'App page-' + i + this.activePage(i)}>
 							<div className="text-section">
 								<div className="text-wrapper">
 									{this.makeModule(i)}
 								</div>
 							</div>
-						</div>;
+						</section>;
 			result.push(stuff);
 		};
 		return result;

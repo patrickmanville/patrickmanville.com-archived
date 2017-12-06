@@ -6,19 +6,10 @@
 	<div id='root'>
 		<%- initialMarkup -%>
 		<p class="loader-title">Loading...</p>
-		<div class="loader">
+		<section class="loader">
+		<% for (var i=0; i<12; i++) { %>
 			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-			<hr>
-		</div>
+		<% } %>
+		</section>
 	</div>
 <%- include('footer') -%>
