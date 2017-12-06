@@ -173,7 +173,10 @@
 					    width: 10%; 
 					    width: 130px;
 					    overflow: hidden;
-
+					    box-shadow: 0 1px 1px #aaa;
+					    &:hover {
+						    box-shadow: 0 1px 1px #777;
+					    }
 					    &:before {
 				    		// Home
 				    		content: "";
