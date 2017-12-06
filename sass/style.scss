@@ -92,24 +92,39 @@
 				    padding-top: 35px;
 				    overflow: visible;
 				    cursor: pointer;
-				    // transition: 0.5s;
-				    // @include m-prefix(animation, page-exit 1s 0s linear 1 normal none running);
+				    transition: 0s 0.6s;
 				    @include m-prefix(animation, change-z-index 0.75s 0s linear 1 normal forwards running);
-				    // transition: 0s 1s, z-index 0s 2s;
-				    transition: 0s 0.6s, box-shadow 0.5s;
 				    border-radius: 200px;
 			    	z-index: 2;
 			    	box-shadow: 0 0 5px #ccc;
 			    	font-size: 1em;
-			    	&:before {
-					    font-size: 0.875em;
-					    color: black;
-			    		font-family: lineAwesome;
-			    		position: absolute;
-			    		top: 50%;
-			    		left: 50%;
-					    @include  m-transform(translate(-50%, -50%)rotateY(0deg));
-			    	}
+				    i {
+				    	content: "";
+						position: absolute;
+						left: 50%;
+						top: 0%;
+						width: 60px;
+						height: 80px;
+						transform: translate(-50%, 0);
+						font-style: normal;
+						z-index: 1;
+				    	&:before {
+						    font-size: 0.875em;
+						    color: black;
+				    		font-family: lineAwesome;
+				    		position: absolute;
+							top: calc(50% - 22.5px);
+				    		left: 50%;
+						    @include  m-transform(translate(-50%, -50%)rotateY(0deg));
+				    	}
+
+				    	&:hover { 
+					    	&:before {
+							    // font-size: 1.25em;
+							    @include m-prefix(animation, 0.75s menuRotate linear 0s infinite);
+					    	}
+					    }
+				    }
 
 					.text-section {
 						padding-top: 20px;
@@ -130,12 +145,6 @@
 				    	display: none;
 				    }
 				    &:hover {
-				    	box-shadow: 0 0 1px #666;
-				    	&:before {
-						    // font-size: 1.25em;
-						    @include m-prefix(animation, 0.75s menuRotate linear 0s infinite);
-						    // animation: 1s menuRotate 0s infinite;
-				    	}
 				    	.header {
 				    		font-size: 15px;
 				    		font-weight: bold;
@@ -173,16 +182,19 @@
 					    width: 10%; 
 					    width: 130px;
 					    overflow: hidden;
-					    box-shadow: 0 1px 1px #aaa;
-					    &:hover {
-						    box-shadow: 0 1px 1px #777;
-					    }
-					    &:before {
-				    		// Home
-				    		content: "";
-						    left: 50%;
-						    z-index: 1;
-					    }
+						box-shadow: 0px 0px 3px #888;
+
+					    i {
+						    width: 130px;
+						    height: 35px;
+					    	&:before {
+					    		// Home
+					    		content: "";
+							    left: 50%;
+							    z-index: 1;
+							    top: 50%;
+						    }
+						}
 					    .text-wrapper {
 					    	display: none;
 					    }
@@ -217,12 +229,14 @@
 				    background: khaki;
 				    &:not(.active){
 					    left: calc(50% - 60px);
-					    &:before {
-					    	// Code
-				    		content: "";
-				    		// Notepad
-				    		content: "";
-					    }
+					    i {
+						    &:before {
+						    	// Code
+					    		content: "";
+					    		// Notepad
+					    		content: "";
+						    }
+						}
 				    }
 				    &.active {
 						.text-section {
@@ -284,10 +298,12 @@
 				    background: antiquewhite;
 				    &:not(.active){
 					    left: 50%;
-					    &:before {
-					    	// Star
-				    		content: "";
-					    }
+					    i {
+						    &:before {
+						    	// Star
+					    		content: "";
+						    }
+						}
 				    }
 				    &.active {
 						.text-section {
@@ -349,10 +365,12 @@
 				    background: aliceblue;
 				    &:not(.active){
 					    left: calc(50% + 60px);
-					    &:before {
-					    	// Screen
-				    		content: "";
-					    }
+					    i {
+						    &:before {
+						    	// Screen
+					    		content: "";
+						    }
+						}
 				    }
 				    &.active {
 						.text-section {
@@ -731,6 +749,19 @@
 	}
 	100% {
 		left: 150%;
+	}
+}
+
+
+@keyframes display-before {
+	0% {
+		display: none;
+	}
+	99% {
+		display: none;
+	}
+	100% {
+		display: block;
 	}
 }
 

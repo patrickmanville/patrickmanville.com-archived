@@ -114,6 +114,11 @@ class App extends React.Component {
 						},
 						{
 							type: "\'skill\'",
+							message: "\'Sass\'",
+							rating: "\'5\'"
+						},
+						{
+							type: "\'skill\'",
 							message: "\'JavaScript\'",
 							rating: "\'4\'"
 						},
@@ -129,12 +134,17 @@ class App extends React.Component {
 						},
 						{
 							type: "\'skill\'",
-							message: "\'Responsive Design\'",
-							rating: "\'5\'"
+							message: "\'ReactJS\'",
+							rating: "\'3\'"
 						},
 						{
 							type: "\'skill\'",
 							message: "\'NodeJS\'",
+							rating: "\'3\'"
+						},
+						{
+							type: "\'skill\'",
+							message: "\'PHP\'",
 							rating: "\'3\'"
 						},
 						{
@@ -169,23 +179,13 @@ class App extends React.Component {
 						},
 						{
 							type: "\'skill\'",
-							message: "\'PHP\'",
-							rating: "\'3\'"
+							message: "\'Responsive Design\'",
+							rating: "\'5\'"
 						},
 						{
 							type: "\'skill\'",
 							message: "\'Semantic HTML\'",
 							rating: "\'3\'"
-						},
-						{
-							type: "\'skill\'",
-							message: "\'ReactJS\'",
-							rating: "\'3\'"
-						},
-						{
-							type: "\'skill\'",
-							message: "\'Sass\'",
-							rating: "\'5\'"
 						},
 						{
 							type: "\'skill\'",
@@ -374,6 +374,7 @@ class App extends React.Component {
 		var result = [];
 		for (var i = 0; i <= 3; i++){
 			var stuff = <section key={i} onClick={this.changePages.bind(this, i)} className={'App page-' + i + this.activePage(i)}>
+							<i></i>
 							<div className="text-section">
 								<div className="text-wrapper">
 									{this.makeModule(i)}
