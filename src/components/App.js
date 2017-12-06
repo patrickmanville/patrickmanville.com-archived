@@ -361,6 +361,12 @@ class App extends React.Component {
 			page : i
 		})
 	}
+	checkIfLoaded(){
+		if(this.state.contents){
+			return "root-inner loaded"
+		}
+		return "root-inner";
+	}
 	makePage(){
 		var result = [];
 		for (var i = 0; i <= 3; i++){
@@ -379,7 +385,7 @@ class App extends React.Component {
 	}
 	render() {
 		return (
-			<div className="root-inner">
+			<div className={this.checkIfLoaded()}>
 				{this.makePage()}
 			</div>
 		);
