@@ -3,6 +3,7 @@ import Module from './Module';
 import ContestList from './ContestList';
 import Contest from './Contest';
 import * as api from '../api';
+import PropTypes from 'prop-types';
 // import ContestPreview from './ContestPreview';
 // import data from '../testData';
 
@@ -15,7 +16,7 @@ const onPopState = handler => {
 
 class App extends React.Component {
 	static propTypes = {
-		initialData: React.PropTypes.object.isRequired
+		initialData: PropTypes.object.isRequired
 	};
 	state = this.props.initialData;
 	componentWillMount() {

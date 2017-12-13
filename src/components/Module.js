@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Module extends React.Component {
 	render() {
@@ -121,20 +122,20 @@ class Module extends React.Component {
 };
 
 Module.propTypes = {
-	header: React.PropTypes.string,
-	work: React.PropTypes.string,
-	experience: React.PropTypes.string,
-	message: React.PropTypes.array,
-	skill: React.PropTypes.string,
-	front: React.PropTypes.string,
-	back: React.PropTypes.string,
-	type: React.PropTypes.string,
-	urls: React.PropTypes.array,
-	paragraph: React.PropTypes.string,
-	date: React.PropTypes.string,
-	position: React.PropTypes.string,
-	location: React.PropTypes.string,
-	number: React.PropTypes.number
+	header: PropTypes.string,
+	work: PropTypes.string,
+	experience: PropTypes.string,
+	message: PropTypes.array,
+	skill: PropTypes.string,
+	front: PropTypes.string,
+	back: PropTypes.string,
+	type: PropTypes.string,
+	urls: PropTypes.array,
+	paragraph: PropTypes.string,
+	date: PropTypes.string,
+	position: PropTypes.string,
+	location: PropTypes.string,
+	number: PropTypes.number
 }
 
 export default Module;
