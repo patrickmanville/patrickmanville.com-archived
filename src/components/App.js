@@ -46,7 +46,7 @@ class App extends React.Component {
 						},
 						{
 							type: "\'text\'",
-							message: "\'Front-end Developer\'"
+							message: "\'Web Developer\'"
 						},
 						{
 							type: "\'button\'",
@@ -85,7 +85,7 @@ class App extends React.Component {
 						{
 							type: "\'experience\'",
 							date: "\'2008 - 2012\'",
-							position: "\'BSC Computer Games Design\'",
+							position: "\'BSc Computer Games Design\'",
 							location: "\'Staffordshire University\'",
 						},
 						{
