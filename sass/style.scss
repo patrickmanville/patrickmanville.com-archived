@@ -133,7 +133,7 @@
 				    	display: none;
 				    	&.header {
 				    		display: block;
-						    font-size: 14px;
+						    font-size: 15px;
 						    text-transform: none;
 						    position: absolute;
 						    left: 50%;
@@ -146,7 +146,7 @@
 				    }
 				    &:hover {
 				    	.header {
-				    		font-size: 15px;
+				    		font-size: 16px;
 				    		font-weight: bold;
 				    	}
 				    }
@@ -167,7 +167,7 @@
 				    h1, h2, h3, h4, h5, p {
 				    	&.header {
 				    		opacity: 0;
-				    		font-size: 15px;
+				    		font-size: 16px;
 						    @include m-prefix(animation, 0.5s header-grow 0.25s forwards);
 				    	}
 				    }
@@ -279,7 +279,7 @@
 										    	font-weight: bold;
 										    }
 										    &.message {
-										    	font-size: 16px;
+										    	font-size: 1rem;
 										    }
 									    }
 								    }
@@ -466,7 +466,7 @@
 			    	display: inline-block;
 				    padding: 4px 10px 4px 30px;
 				    font-family: 'Economica', sans-serif;
-				    font-size: 16px;
+				    font-size: 1rem;
 				    text-transform: uppercase;
 				    box-sizing: border-box;
 				    cursor: pointer;
@@ -493,7 +493,7 @@
 				    &:after {
 				    	font-family: lineAwesome;
 				    	content: "";
-				    	font-size: 20px;
+				    	font-size: 1.25rem;
 					    font-weight: normal;
 					    position: absolute;
 					    left: 20px;
@@ -540,12 +540,12 @@
 				    }
 			    }
 			    h2 {
-				    margin: 0;
-				    font-size: 47px;
+				    margin: 0;    
+				    font-size: 2.9375rem;
 				    color: #2b2b2b;
 				    &:not(.header){
-			    	    font-family: 'Dosis', serif;
-					    font-size: 26px;
+			    	    font-family: 'Dosis', serif;    
+			    	    font-size: 1.625rem;
 					    margin-bottom: 40px;
 				    }
 					&.header {
@@ -593,7 +593,7 @@
 					    width: 35%;
 					}
 				    margin-top: 30px;
-				    font-size: 18px;
+				    font-size: 1.125rem;
 				    color: #333;
 				    font-family: 'Dosis', serif;
 				    width: 26%;
@@ -682,7 +682,7 @@
 	}
 	100% {
 		opacity: 1;
-		font-size: 90px;
+	    font-size: 5.625rem;
 	}
 }
 

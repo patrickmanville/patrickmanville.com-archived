@@ -91,7 +91,7 @@ class App extends React.Component {
 						{
 							type: "\'experience\'",
 							date: "\'2001 - 2008\'",
-							location: "\'Planstbrook School\'",
+							location: "\'Plantsbrook School\'",
 						},
 					],
 					[
