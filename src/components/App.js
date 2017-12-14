@@ -66,7 +66,7 @@ class App extends React.Component {
 						},
 						{
 							type: "\'text\'",
-							message: "\'My work history & education\'"
+							message: "\'My coding experience at a glance\'"
 						},
 						{
 							type: "\'experience\'",
@@ -87,11 +87,8 @@ class App extends React.Component {
 							date: "\'2008 - 2012\'",
 							position: "\'BSc Computer Games Design\'",
 							location: "\'Staffordshire University\'",
-						},
-						{
-							type: "\'experience\'",
-							date: "\'2001 - 2008\'",
-							location: "\'Plantsbrook School\'",
+							message: "\'Using front-end languages such as HTML, CSS & JavaScript to complete web-based projects as well as studying object-oriented programming in Java and C++.\'"
+						
 						},
 					],
 					[
@@ -101,7 +98,7 @@ class App extends React.Component {
 						},
 						{
 							type: "\'text\'",
-							message: "\'My current ability levels\'"
+							message: "\'Here\\'s what I do best\'"
 						},
 						{
 							type: "\'skill\'",
@@ -201,7 +198,7 @@ class App extends React.Component {
 						},
 						{
 							type: "\'text\'",
-							message: "\'A selection of projects I have worked on\'"
+							message: "\'See some of my work in action\'"
 						},
 						{
 							type: "\'work\'",
