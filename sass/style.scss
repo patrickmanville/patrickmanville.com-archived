@@ -44,44 +44,41 @@ html {
 	    background: black;
 	    width: 100%;
 	    height: 100%;
-    	.root-inner:not(.loaded) {
-    		display: none;
-	    	.loader {
-	    		position: absolute;
-	    		top: 50%;
-	    		left: 50%;
-	    		width: 50px;
-	    		height: 50px;
-	    		transform: translate(-50%, -50%);
-	    		opacity: 0;
-			    @include m-prefix(animation, opacity-in 0.75s 1s linear 1 normal forwards running);
-	    		hr {
-	    			@include fullscreen;
-				    border: none;
-				    margin: 0;
-	    			&:before {
-		    			content: "";
-		    			width: 10px;
-		    			height: 10px;
-		    			border-radius: 100px;
-		    			top: 0;
-		    			left: 0;
-		    			position: absolute;
-		    			background: white;
-					    @include m-prefix(animation,loading 800ms infinite);
-		    		}
-					    @for $i from 1 through 12 {
-					    	$spin: 360deg / 12 * $i;
-					    	$delay: 0.75s / 12 * $i;
-					    	&:nth-child(#{$i}){
-					    		transform: rotateZ($spin);
-					    		&:before {
-						    		animation-delay: $delay;
-						    	}
-					    	}
-					    }
+    	.loader {
+    		position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		width: 50px;
+    		height: 50px;
+    		transform: translate(-50%, -50%);
+    		opacity: 0;
+		    @include m-prefix(animation, opacity-in 0.75s 1s linear 1 normal forwards running);
+    		hr {
+    			@include fullscreen;
+			    border: none;
+			    margin: 0;
+    			&:before {
+	    			content: "";
+	    			width: 10px;
+	    			height: 10px;
+	    			border-radius: 100px;
+	    			top: 0;
+	    			left: 0;
+	    			position: absolute;
+	    			background: white;
+				    @include m-prefix(animation,loading 800ms infinite);
 	    		}
-	    	}
+			    @for $i from 1 through 12 {
+			    	$spin: 360deg / 12 * $i;
+			    	$delay: 0.75s / 12 * $i;
+			    	&:nth-child(#{$i}){
+			    		transform: rotateZ($spin);
+			    		&:before {
+				    		animation-delay: $delay;
+				    	}
+			    	}
+			    }
+    		}
     	}
 	    .root-inner.loaded {
 	    	display: block;
