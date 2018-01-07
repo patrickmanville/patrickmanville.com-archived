@@ -1,26 +1,10 @@
 import React from 'react';
 import Module from './Module';
-import ContestList from './ContestList';
-import Contest from './Contest';
 import * as api from '../api';
 import PropTypes from 'prop-types';
-// import ContestPreview from './ContestPreview';
-// import data from '../testData';
-
-const pushState = (obj, url) =>
-	window.history.pushState(obj, '', url);
-
-const onPopState = handler => {
-	window.onpopstate = handler;
-}
 
 class App extends React.Component {
-	static propTypes = {
-		initialData: PropTypes.object.isRequired
-	};
-	state = this.props.initialData;
-	componentWillMount() {
-	}
+	state = {};
 	componentDidUpdate() {
 		if(this.state.refresh == true){
 			this.setState({
@@ -29,11 +13,6 @@ class App extends React.Component {
 		}
 	}
 	componentDidMount() {
-		onPopState((event) => {
-			this.setState({
-				currentContestId: (event.state || {}).currentContestId
-			})
-		});
 		this.setState(function(props){
 			return {
 				page: 0,
@@ -258,11 +237,6 @@ class App extends React.Component {
 			}
 		});
 	}
-	componentWillUnmount() {
-		// clean timers, listeners
-		onPopState(null);
-
-	}
 	handleClick = (evt) => {
 		evt.preventDefault();
 		if (this.refs.name !== null ){
@@ -371,7 +345,7 @@ class App extends React.Component {
 	makePage(){
 		var result = [];
 		for (var i = 0; i <= 3; i++){
-			var stuff = <section key={i} onClick={this.changePages.bind(this, i)} className={'App page-' + i + this.activePage(i)}>
+			var stuff = <section key={i} onClick={this.changePages.bind(this, i)} className={'app page-' + i + this.activePage(i)}>
 							<i></i>
 							<div className="text-section">
 								<div className="text-wrapper">

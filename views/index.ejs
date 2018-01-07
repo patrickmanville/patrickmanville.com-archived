@@ -1,7 +1,5 @@
-<script type="text/javascript">
-	window.initialData = <%- JSON.stringify(initialData) -%>
-</script>
+
 
 <%- include('header')-%>
-	<div id='root'><div id='root'><%- initialMarkup -%><p class="loader-title">Loading...</p><section class="loader"><% for (var i=0; i<12; i++) { %><hr><% } %></section></div></div>
+	<div id='root'><p class="loader-title">Loading...</p><section class="loader"><% for (var i=0; i<12; i++) { %><hr><% } %></section></div>
 <%- include('footer') -%>
